@@ -12401,7 +12401,13 @@ de_DE,city,1133,Äußere Neustadt
 de_DE,city,1134,Öhringen
 de_DE,city,1135,Übach-Palenberg
 de_DE,city,1136,Überlingen
-de_DE,suffix,1,Street
+de_DE,suffix,1,allee
+de_DE,suffix,2,gasse
+de_DE,suffix,3,platz
+de_DE,suffix,4,ring
+de_DE,suffix,5,str.
+de_DE,suffix,6,straße
+de_DE,suffix,7,weg
 de_DE,state,1,Baden-Württemberg
 de_DE,state,2,Bayern
 de_DE,state,3,Berlin

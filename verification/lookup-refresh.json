@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "existing lookup migration",
+    "idempotent import",
+    "CSV digest persisted",
+    "7 German street suffixes",
+    "English output preserved",
+    "German reproducibility and page-size invariance",
+    "real HTTP result",
+    "no authored comments/docstrings"
+  ],
+  "lookup_digest": "636a78b9c2fc49474f780e768e41df799bb746c82ff95781cf7e4e498b452e97",
+  "first_german_address": "Bauerallee 616, 18689 Vaihingen an der Enz",
+  "status": "PASS"
+}

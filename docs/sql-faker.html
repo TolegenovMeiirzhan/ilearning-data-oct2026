@@ -20,6 +20,7 @@ SELECT locale, category, COUNT(*) FROM fake.words
 GROUP BY locale, category
 ON CONFLICT (locale, category)
 DO UPDATE SET amount = EXCLUDED.amount;</pre>
+<h2>Lookup version</h2><p>The importer stores the SHA-256 digest of lookup_words.csv in fake.lookup_version. A changed CSV refreshes the coursework lookup data atomically under a transaction lock; an unchanged file preserves it. German street suffixes were corrected after the recorded demonstration. Current output uses German suffixes such as straße, weg and allee. English output and its measured benchmark are unchanged.</p>
 <h2>Python usage</h2><pre>with psycopg.connect(database_url) as connection:
     users = connection.execute(
         "CALL fake.generate_users(%s,%s,%s,%s,NULL)",
