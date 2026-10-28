@@ -1,0 +1,23 @@
+{
+  "source_file": "task1_d.json",
+  "source_sha256": "116860f2ffca0352442dbbd053afa6eea9bb2608f034dc6e5c3ea79072fbfb7b",
+  "source_format": "Ruby hash notation (normalized safely to JSON)",
+  "source_record_count": 5003,
+  "table_row_counts": {
+    "books": 5003,
+    "summary": 49
+  },
+  "currency_counts": {
+    "USD": 3465,
+    "EUR": 1538
+  },
+  "publication_year_min": 1871,
+  "publication_year_max": 2026,
+  "ids_above_signed_int64": 5003,
+  "duplicate_ids": 0,
+  "rejected_records": 0,
+  "usd_total_mills": 255268584,
+  "exchange_rate": "1 EUR = 1.2 USD",
+  "rounding": "ROUND_HALF_UP to cents after calculating the yearly mean",
+  "sqlite_integrity_check": "ok"
+}

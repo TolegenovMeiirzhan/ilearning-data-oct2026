@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data Lab · iLearning</title>
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/vendor/chart.umd.min.js" defer></script>
+<script src="/assets/app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#home"><span class="brand-mark">D</span> Data Lab</a><nav aria-label="Projects"><a href="#mines">Mine analytics</a><a href="#contacts">SQL Faker</a><a href="/task4/">Bookstore</a><a href="#summary">Book summary</a></nav><span class="course">iLearning / Data Engineering</span></header>
+<main>
+<section id="home" class="view">
+<p class="eyebrow">DATA ENGINEERING WORKSPACE</p><h1>From source data<br>to useful answers.</h1><p class="intro">Explore mine production, generate reproducible contacts in SQL, and inspect the book analytics projects.</p>
+<div class="project-grid">
+<a class="project" href="#mines"><span class="project-number">05</span><h2>Mine analytics</h2><p>Formula-generated production data, four anomaly tests, polynomial trends and a detailed PDF report.</p><span class="project-link">Open analytics →</span></a>
+<a class="project" href="#contacts"><span class="project-number">06</span><h2>SQL Faker</h2><p>Two locales. One seed. Deterministic contact generation performed entirely by PostgreSQL procedures.</p><span class="project-link">Generate contacts →</span></a>
+<a class="project" href="/task4/"><span class="project-number">04</span><h2>Bookstore analytics</h2><p>Revenue, customer reconciliation and author sets across five independent datasets.</p><span class="project-link">Open dashboard →</span></a>
+<a class="project" href="#summary"><span class="project-number">03.5</span><h2>Book summary</h2><p>Relational ingestion and yearly aggregation, with exact currency conversion and database row counts.</p><span class="project-link">Inspect results →</span></a>
+</div></section>
+<section id="mines" class="view" hidden>
+<div class="heading"><div><p class="eyebrow">TASK 05 / WEYLAND-YUTANI</p><h1>Mine production</h1><p class="muted">Compare output, inspect anomalies and export the analysis.</p></div><a id="generator-link" class="button secondary" target="_blank" rel="noopener">Open generator spreadsheet ↗</a></div>
+<div class="source-panel"><label class="grow">Google Sheets source<input id="sheet-source" aria-label="Google Sheets source" placeholder="Paste a Google Sheets URL"></label><button id="refresh-sheet">Refresh from sheet</button><button id="sample" class="secondary">Use saved sample</button></div>
+<div class="status-line"><span id="source-status" class="tag">Saved sample</span><span id="mine-period" class="muted"></span><span id="mine-error" class="error" role="alert"></span></div>
+<div class="controls"><label>View<select id="mine-select"><option>Total</option></select></label><label>Chart<select id="chart-type"><option value="line">Line</option><option value="bar">Bar</option><option value="stacked">Stacked</option></select></label><label>Trend degree<select id="degree"><option>1</option><option>2</option><option>3</option><option>4</option></select></label><label>IQR factor<input id="iqr" type="number" value="1.5" min="0.1" max="10" step="0.1"></label><label>Z threshold<input id="z" type="number" value="3" min="0.1" max="10" step="0.1"></label><label>Moving window<input id="window" type="number" value="7" min="1" max="60"></label><label>Moving gap %<input id="moving_percent" type="number" value="35" min="1" max="1000"></label><label>Grubbs alpha<input id="alpha" type="number" value="0.05" min="0.001" max="0.99" step="0.01"></label></div>
+<div class="metrics" id="mine-metrics"></div>
+<article class="panel"><div class="panel-heading"><div><h2 id="chart-title">Daily output</h2><p class="muted">Red points exceeded at least one selected anomaly threshold.</p></div><button id="pdf" class="secondary">Download PDF report ↓</button></div><div class="chart-wrap"><canvas id="mine-chart" aria-label="Daily mine production" role="img"></canvas></div></article>
+<article class="panel"><h2>Every mine and total output</h2><div class="table-scroll"><table><thead><tr><th>Series</th><th>Mean</th><th>Std. deviation</th><th>Median</th><th>IQR</th><th>Anomalies</th></tr></thead><tbody id="mine-table"></tbody></table></div></article>
+<article class="panel"><h2>Detected observations</h2><div class="table-scroll"><table><thead><tr><th>Date</th><th>Output, tonnes</th><th>Direction</th><th>Detected by</th></tr></thead><tbody id="anomaly-table"></tbody></table></div><p id="analysis-note" class="small muted"></p></article>
+</section>
+<section id="contacts" class="view" hidden>
+<div class="heading"><div><p class="eyebrow">TASK 06 / SQL PROCEDURE LIBRARY</p><h1>Reproducible contacts</h1><p class="muted">Change the locale or seed to explore another dataset. Return to the same values to reproduce it.</p></div><a class="button secondary" href="/task6/docs" target="_blank">Procedure documentation ↗</a></div>
+<div class="controls contact-controls"><label>Locale<select id="locale"><option value="en_US">English / USA</option><option value="de_DE">Deutsch / Deutschland</option></select></label><label>Seed<input id="seed" value="42" inputmode="numeric"></label><label>Users per batch<select id="page-size"><option>10</option><option>25</option><option>50</option><option>100</option></select></label><div class="paging"><button id="previous" class="secondary">← Previous</button><span id="batch-label">Batch 1</span><button id="next">Next batch →</button></div></div>
+<div class="status-line"><span class="tag">Generated by PostgreSQL</span><span id="generation-time" class="muted"></span><span id="contact-error" class="error" role="alert"></span></div>
+<article class="panel"><div class="table-scroll"><table class="contacts-table"><thead><tr><th>Index / name</th><th>Contact</th><th>Address</th><th>Location</th><th>Physical attributes</th></tr></thead><tbody id="contacts-table"></tbody></table></div></article>
+<p class="small muted">Synthetic data for software testing. Email addresses use example.test. Coordinates are sampled across the whole sphere and are independent of the mailing address.</p>
+</section>
+<section id="summary" class="view" hidden>
+<p class="eyebrow">TASK 03.5 / RELATIONAL INGESTION</p><h1>Books by publication year</h1><p class="muted">EUR converted at 1.2 USD. The yearly average is rounded after aggregation.</p><div id="summary-metrics" class="metrics"></div><article class="panel"><div class="table-scroll"><table><thead id="summary-head"></thead><tbody id="summary-table"></tbody></table></div></article><article class="panel"><h2>Source and SQL</h2><div class="source-links"><a href="/source/task35/main.py">Python ingestion</a><a href="/source/task35/schema.sql">Database schema</a><a href="/source/task35/summary.sql">Summary query</a><a href="/source/task35/show_database.py">Database inspection</a></div></article>
+</section>
+</main><footer>Data Lab · iLearning Data Engineering</footer>
+</body></html>

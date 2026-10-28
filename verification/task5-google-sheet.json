@@ -1,0 +1,38 @@
+{
+  "spreadsheet_id": "1V1jk3IbcGMjZDNJ41Jo7bEDaei9JrHGrlZ-k3UVdfgs",
+  "url": "https://docs.google.com/spreadsheets/d/1V1jk3IbcGMjZDNJ41Jo7bEDaei9JrHGrlZ-k3UVdfgs/edit",
+  "native_conversion": true,
+  "observations": 89,
+  "checks": {
+    "changed": [
+      [
+        1151.05
+      ]
+    ],
+    "altered": [
+      [
+        "Date",
+        "Mine 01",
+        "Mine 02",
+        "Mine 03",
+        "Mine 04",
+        "Mine 05",
+        "Mine 06",
+        "Mine 07"
+      ],
+      [
+        46235,
+        962.12,
+        610.43,
+        827.43,
+        915.83,
+        635.12,
+        786.18,
+        683.94
+      ]
+    ],
+    "edge": null
+  },
+  "sharing": "Private; anyone-with-link edit access not yet enabled",
+  "browser_visual_check": "Not run: computer-use stopped by policy"
+}

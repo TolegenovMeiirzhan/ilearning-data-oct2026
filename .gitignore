@@ -1,0 +1,9 @@
+.venv/
+.local/
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.log
+verification/private*

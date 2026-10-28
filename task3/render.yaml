@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ilearning-lcm-meiirzhan
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /tolegenovmeiirzhan_gmail_com?x=1&y=1
+    envVars:
+      - key: REGISTRATION_EMAIL
+        value: YOUR_REGISTRATION_EMAIL
+      - key: HOST
+        value: 0.0.0.0

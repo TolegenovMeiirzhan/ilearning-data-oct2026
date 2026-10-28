@@ -1,0 +1,12 @@
+.git
+.venv
+.local
+node_modules
+__pycache__
+*.pyc
+.env
+.env.*
+verification
+task2/task2.zip
+task4/data
+task35/input

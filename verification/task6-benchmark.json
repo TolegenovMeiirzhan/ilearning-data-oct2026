@@ -1,0 +1,114 @@
+{
+  "database": "PostgreSQL 18 local Windows",
+  "batch_size": 1000,
+  "trials": [
+    {
+      "users": 1000,
+      "seconds": 1.7343260999914492,
+      "users_per_second": 576.5928333806027
+    },
+    {
+      "users": 1000,
+      "seconds": 1.6137899000023026,
+      "users_per_second": 619.6593497075258
+    },
+    {
+      "users": 1000,
+      "seconds": 1.696798500008299,
+      "users_per_second": 589.3451697388399
+    }
+  ],
+  "median_users_per_second": 589.3451697388399,
+  "scope": "database CALL plus client fetch and JSON decoding; excludes HTTP and browser rendering",
+  "lookup_counts": [
+    {
+      "locale": "de_DE",
+      "category": "city",
+      "count": 1136
+    },
+    {
+      "locale": "de_DE",
+      "category": "eye",
+      "count": 5
+    },
+    {
+      "locale": "de_DE",
+      "category": "first",
+      "count": 2002
+    },
+    {
+      "locale": "de_DE",
+      "category": "last",
+      "count": 404
+    },
+    {
+      "locale": "de_DE",
+      "category": "state",
+      "count": 16
+    },
+    {
+      "locale": "de_DE",
+      "category": "street",
+      "count": 2385
+    },
+    {
+      "locale": "de_DE",
+      "category": "suffix",
+      "count": 1
+    },
+    {
+      "locale": "de_DE",
+      "category": "title",
+      "count": 2
+    },
+    {
+      "locale": "en_US",
+      "category": "city",
+      "count": 2947
+    },
+    {
+      "locale": "en_US",
+      "category": "eye",
+      "count": 5
+    },
+    {
+      "locale": "en_US",
+      "category": "first",
+      "count": 690
+    },
+    {
+      "locale": "en_US",
+      "category": "last",
+      "count": 1000
+    },
+    {
+      "locale": "en_US",
+      "category": "state",
+      "count": 51
+    },
+    {
+      "locale": "en_US",
+      "category": "street",
+      "count": 1584
+    },
+    {
+      "locale": "en_US",
+      "category": "suffix",
+      "count": 195
+    },
+    {
+      "locale": "en_US",
+      "category": "title",
+      "count": 3
+    }
+  ],
+  "statistical_sample": {
+    "size": 2000,
+    "mean_sin_latitude": -0.0073470165545437985,
+    "variance_sin_latitude": 0.3214777354948341,
+    "mean_height_cm": 172.132555,
+    "std_height_cm": 10.143308593450906,
+    "mean_weight_kg": 74.91436999999999,
+    "std_weight_kg": 11.730097881224179
+  }
+}

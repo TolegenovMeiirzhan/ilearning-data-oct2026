@@ -1,0 +1,7 @@
+{
+  "name": "ilearning-data-local",
+  "private": true,
+  "type": "module",
+  "scripts": {"start": "node local.mjs"},
+  "dependencies": {"embedded-postgres": "18.4.0-beta.17"}
+}

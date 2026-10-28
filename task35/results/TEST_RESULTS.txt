@@ -1,0 +1,21 @@
+Command: python -m unittest -v test_solution.py
+test_actual_source_counts_and_integrity (test_solution.SolutionTests.test_actual_source_counts_and_integrity) ... ok
+test_all_49_summary_rows_match_independent_fraction_recomputation (test_solution.SolutionTests.test_all_49_summary_rows_match_independent_fraction_recomputation) ... ok
+test_average_rounds_half_up (test_solution.SolutionTests.test_average_rounds_half_up) ... ok
+test_bad_prices_and_invalid_schema_are_rejected (test_solution.SolutionTests.test_bad_prices_and_invalid_schema_are_rejected) ... ok
+test_code_is_never_evaluated (test_solution.SolutionTests.test_code_is_never_evaluated) ... ok
+test_conversion_retains_fractional_cents (test_solution.SolutionTests.test_conversion_retains_fractional_cents) ... ok
+test_does_not_round_individual_converted_prices (test_solution.SolutionTests.test_does_not_round_individual_converted_prices) ... ok
+test_duplicate_fields_and_ids_are_rejected (test_solution.SolutionTests.test_duplicate_fields_and_ids_are_rejected) ... ok
+test_every_source_field_and_exact_price_survives_import (test_solution.SolutionTests.test_every_source_field_and_exact_price_survives_import) ... ok
+test_full_csv_exports_match_persisted_tables (test_solution.SolutionTests.test_full_csv_exports_match_persisted_tables) ... ok
+test_rerun_is_idempotent_and_invalid_source_preserves_existing_database (test_solution.SolutionTests.test_rerun_is_idempotent_and_invalid_source_preserves_existing_database) ... ok
+test_unusual_years_are_preserved (test_solution.SolutionTests.test_unusual_years_are_preserved) ... ok
+test_valid_json_and_ruby_keys_without_corrupting_strings (test_solution.SolutionTests.test_valid_json_and_ruby_keys_without_corrupting_strings) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.874s
+
+OK
+
+Exit code: 0
