@@ -1,0 +1,22 @@
+[
+  {
+    "file": "task35-demo-1080p.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 15,
+    "duration_seconds": 123.4,
+    "audio": false,
+    "full_decode": "PASS",
+    "sha256": "0c495f53dcea9a8d5e62a558cedd3f4d5791c6e7cbafb3f44da1a4eca99844f5"
+  },
+  {
+    "file": "task6-demo-1080p.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 15,
+    "duration_seconds": 97.47,
+    "audio": false,
+    "full_decode": "PASS",
+    "sha256": "a72e512acfc973d89911eb2da7f46255721198b90974c30cd3af88764663ce15"
+  }
+]

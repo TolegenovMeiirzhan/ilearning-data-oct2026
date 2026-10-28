@@ -33,7 +33,7 @@ async function readJson(url) {
 
 async function refreshMines() {
   const version = ++mineVersion;
-  $('mine-error').textContent = ''; $('refresh-sheet').disabled = true;
+  $('mine-error').textContent = ''; $('refresh-sheet').disabled = true; $('pdf').disabled = true;
   try {
     const result = await readJson('/api/task5?' + query());
     if (version !== mineVersion) return;
@@ -50,6 +50,7 @@ async function refreshMines() {
     for (const s of result.series) row($('mine-table'), [s.name,number(s.mean),number(s.standard_deviation),number(s.median),number(s.iqr),s.anomalies.length]);
     $('analysis-note').textContent = result.notes.moving_average + ' ' + result.notes.grubbs;
     renderMineChart();
+    $('pdf').disabled = false;
   } catch (error) { $('mine-error').textContent = error.message; }
   finally { if (version === mineVersion) $('refresh-sheet').disabled = false; }
 }
@@ -111,11 +112,31 @@ async function refreshSummary() {
   metric($('summary-metrics'), 'Publication years',number(result.summary_rows));
   metric($('summary-metrics'), 'Database integrity',result.integrity);
   metric($('summary-metrics'), 'EUR → USD rate','1.20');
-  const keys = Object.keys(result.summary[0]);
+  const keys = ['publication_year','book_count','average_price'];
   $('summary-head').replaceChildren(); const head = document.createElement('tr');
   for (const key of keys) { const th = document.createElement('th'); th.textContent = key.replaceAll('_',' '); head.append(th); }
   $('summary-head').append(head); $('summary-table').replaceChildren();
   for (const item of result.summary) row($('summary-table'),keys.map(key=>item[key]));
+  $('book-preview').replaceChildren();
+  for (const book of result.example_books) row($('book-preview'),[book.id,book.title,book.publication_year,book.original_price,book.currency,(book.price_usd_mills/1000).toFixed(3)]);
+}
+
+async function downloadReport() {
+  $('mine-error').textContent = ''; $('pdf').disabled = true;
+  try {
+    const response = await fetch('/api/task5/report.pdf?' + query());
+    if (!response.ok) {
+      const result = await response.json();
+      throw new Error(result.error || 'The PDF report could not be generated');
+    }
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url; link.download = 'mine-production-report.pdf';
+    document.body.append(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  } catch (error) { $('mine-error').textContent = error.message; }
+  finally { $('pdf').disabled = false; }
 }
 
 function showView() {
@@ -133,7 +154,7 @@ async function start() {
   $('sample').onclick = () => {source='';refreshMines();};
   $('mine-select').onchange = renderMineChart; $('chart-type').onchange = renderMineChart;
   for (const key of ['degree','iqr','z','window','moving_percent','alpha']) $(key).onchange = refreshMines;
-  $('pdf').onclick = () => {location.href='/api/task5/report.pdf?'+query();};
+  $('pdf').onclick = downloadReport;
   for (const key of ['locale','seed','page-size']) $(key).onchange = () => {batch=0;refreshContacts();};
   $('next').onclick = () => {batch++;refreshContacts();};
   $('previous').onclick = () => {batch=Math.max(0,batch-1);refreshContacts();};

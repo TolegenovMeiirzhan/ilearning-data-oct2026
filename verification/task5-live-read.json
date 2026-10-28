@@ -1,0 +1,19 @@
+{
+  "checked_date": "2026-10-28",
+  "url": "https://docs.google.com/spreadsheets/d/1V1jk3IbcGMjZDNJ41Jo7bEDaei9JrHGrlZ-k3UVdfgs/edit",
+  "anonymous_csv_http": 200,
+  "app_http": 200,
+  "source": "Google Sheets live export",
+  "days": 89,
+  "series": [
+    "Mine 01",
+    "Mine 02",
+    "Mine 03",
+    "Mine 04",
+    "Mine 05",
+    "Total"
+  ],
+  "pdf_http": 200,
+  "pdf_bytes": 593079,
+  "edit_access": "User reports anyone-with-link Editor enabled; anonymous CSV read verified; editing not independently tested"
+}
