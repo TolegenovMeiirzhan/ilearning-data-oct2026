@@ -4,6 +4,6 @@
     "branch": "main",
     "path": "/docs"
   },
-  "status": null,
+  "status": "building",
   "public_python_application": false
 }
