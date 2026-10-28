@@ -7,7 +7,10 @@
     "Task 6: five real stored procedures, dictionary capacity, benchmark, sphere/normal sample checks",
     "Authored Python solutions: no comments or docstrings"
   ],
-  "browser_verification": "NOT RUN: computer-use safety stop",
+  "browser_verification": "PASS in preceding browser session: desktop chart controls/PDF download, real SQL pagination/seed/locale, 49-row summary; mobile widths 390px for Tasks 3.5/4/5/6. Current browser use is disabled in Work settings.",
   "public_deployment": "NOT RUN",
-  "live_AI": "NOT RUN: key destination not approved"
+  "live_AI": "NOT RUN: key destination not approved",
+  "live_google_sheets": "PASS anonymous CSV, 89 dates, 5 mines plus total, live HTTP analysis and PDF",
+  "videos": "PASS two real silent local-app recordings, 1920x1080, full decode and sampled frames; Task 5 recording pending",
+  "public_materials": "PASS seven anonymous HTTPS checks: portal, SQL documentation, two videos, live-source PDF, static bookstore and data JSON"
 }

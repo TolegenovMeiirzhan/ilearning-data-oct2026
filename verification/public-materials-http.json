@@ -1,0 +1,55 @@
+{
+  "url": "https://tolegenovmeiirzhan.github.io/ilearning-data-oct2026/",
+  "checks": [
+    {
+      "path": "",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 4018,
+      "sha256": "6526338a2d7abf46708f128e5b7d48580e268f4013ed29e4c514e2ea20fa5ba4"
+    },
+    {
+      "path": "sql-faker.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 6979,
+      "sha256": "a4c29519059cd6aa0447aa1ab0174c01dc809b5fbaea05ab925cf9884b5f3add"
+    },
+    {
+      "path": "videos/task35-demo-1080p.mp4",
+      "status": 200,
+      "type": "video/mp4",
+      "bytes": 2925653,
+      "sha256": "0c495f53dcea9a8d5e62a558cedd3f4d5791c6e7cbafb3f44da1a4eca99844f5"
+    },
+    {
+      "path": "videos/task6-demo-1080p.mp4",
+      "status": 200,
+      "type": "video/mp4",
+      "bytes": 3797603,
+      "sha256": "a72e512acfc973d89911eb2da7f46255721198b90974c30cd3af88764663ce15"
+    },
+    {
+      "path": "reports/task5-live-report.pdf",
+      "status": 200,
+      "type": "application/pdf",
+      "bytes": 593079,
+      "sha256": "df2190ea0ec2638dbca5b7bed92c81b783695cb79c6bf14dd1dab308cd4fbd73"
+    },
+    {
+      "path": "bookstore/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 5895,
+      "sha256": "c0633419da45cca60b9ccd1530e60ff4bfb4aaf64a2de855fc374b241ad69cd3"
+    },
+    {
+      "path": "bookstore/data.json",
+      "status": 200,
+      "type": "application/json; charset=utf-8",
+      "bytes": 300431,
+      "sha256": "40ba5bfc5428957c05a37c2c6007c4fd85f18686722ec8011c5e22a002edc72d"
+    }
+  ],
+  "public_python_application": false
+}

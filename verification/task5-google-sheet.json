@@ -33,6 +33,7 @@
     ],
     "edge": null
   },
-  "sharing": "Private; anyone-with-link edit access not yet enabled",
-  "browser_visual_check": "Not run: computer-use stopped by policy"
+  "sharing": "User reports anyone-with-link Editor enabled. Anonymous CSV and live Python read verified HTTP 200; edit permission not independently exercised.",
+  "browser_visual_check": "Not run: computer-use stopped by policy",
+  "live_checks": "See task5-live-read.json and task5-live-report.pdf"
 }
