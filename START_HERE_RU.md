@@ -52,3 +52,9 @@ https://docs.google.com/spreadsheets/d/1V1jk3IbcGMjZDNJ41Jo7bEDaei9JrHGrlZ-k3UVd
 ## Что учить в первую очередь
 
 Python → функции/словари/файлы/Decimal → pandas → SQL SELECT/JOIN/GROUP BY → процедуры PostgreSQL → распределения и статистика → HTTP и публикация. Точные ссылки и темы указаны после разбора каждого задания.
+
+## Публичные исходники
+
+https://github.com/TolegenovMeiirzhan/ilearning-data-oct2026
+
+GitHub проверен по HTTPS и SHA коммита. Это публикация кода; работающего публичного Python-приложения ещё нет. Исходные архивы преподавателя, локальные секреты и персональные черновики писем не публиковались.
